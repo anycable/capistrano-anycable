@@ -1,3 +1,7 @@
+[![Gem Version](https://badge.fury.io/rb/capistrano-anycable.svg)](https://rubygems.org/gems/capistrano-anycable) [![Build Status](https://travis-ci.org/anycable/capistrano-anycable.svg?branch=master)](https://travis-ci.org/anycable/capistrano-anycable)
+[![Documentation](https://img.shields.io/badge/docs-link-brightgreen.svg)](https://docs.anycable.io/#capistrano)
+
+
 # Capistrano::Anycable
 
 AnyCable integration for Capistrano.
