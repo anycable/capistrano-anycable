@@ -6,11 +6,18 @@
 
 AnyCable integration for Capistrano.
 
+# Requirements
+
+AnyCable >= 0.6.2
+
 ## Installation
 
-Add this line to your application's Gemfile:
+Add those lines to your application's Gemfile:
 
 ```ruby
+# To run daemonized `anycabled`
+gem "daemons", "~> 1.3", require: false
+
 gem "capistrano-anycable", group: :development
 ```
 
@@ -27,7 +34,29 @@ $ bundle
 require "capistrano/anycable"
 ```
 
-TBD
+## Configuration
+
+Available configuration options (with defaults):
+
+```ruby
+# Restart AnyCable after `deploy:restart` phase
+set :anycable_default_hooks, true
+
+# Capistrano roles to start AnyCable on
+set :anycable_roles, :app
+# Path to the root of your application
+set :anycable_path, -> { release_path }
+# Command to start AnyCable
+set :anycable_command, -> { [:bundle, :exec, :anycabled] }
+
+# Sets RAILS_ENV for AnyCable process
+set :anycable_env, -> { fetch(:rack_env, fetch(:rails_env, fetch(:stage))) }
+# AnyCable configuration parameters passed through enviroment,
+# see https://docs.anycable.io/#/ruby/configuration?id=parameters
+set :anycable_environment_variables, {}
+# Path to anycable.yml
+set :anycable_conf, nil
+```
 
 ## Contributing
 
