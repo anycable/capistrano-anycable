@@ -34,7 +34,6 @@ Lint/Void:
   Exclude:
     - '**/*.md'
 
-
 Lint/DuplicateMethods:
   Exclude:
     - '**/*.md'
@@ -42,6 +41,7 @@ Lint/DuplicateMethods:
 Naming/FileName:
   Exclude:
    - '**/*.md'
+   - 'lib/capistrano-anycable.rb'
 
 Layout/InitialIndentation:
   Exclude:
