@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    capistrano-anycable (0.0.1)
+    capistrano-anycable (0.1.0)
 
 GEM
   remote: https://rubygems.org/
@@ -41,4 +41,4 @@ DEPENDENCIES
   standard (~> 0.0.12)
 
 BUNDLED WITH
-   1.17.1
+   1.17.3
