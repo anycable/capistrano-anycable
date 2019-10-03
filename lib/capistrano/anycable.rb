@@ -1,3 +1,3 @@
 # frozen_string_literal: true
 
-require "capistrano/anycable/version"
+load File.expand_path("../tasks/anycable.rake", __FILE__)
