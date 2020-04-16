@@ -4,7 +4,7 @@
 
 # Capistrano::Anycable
 
-AnyCable integration for Capistrano.
+AnyCable RPC server integration for Capistrano.
 
 # Requirements
 
@@ -39,19 +39,19 @@ require "capistrano/anycable"
 Available configuration options (with defaults):
 
 ```ruby
-# Restart AnyCable after `deploy:restart` phase
+# Restart AnyCable RPC server after `deploy:restart` phase
 set :anycable_default_hooks, true
 
-# Capistrano roles to start AnyCable on
+# Capistrano roles to start AnyCable RPC server on
 set :anycable_roles, :app
 # Path to the root of your application
 set :anycable_path, -> { release_path }
-# Command to start AnyCable
+# Command to start AnyCable RPC server
 set :anycable_command, -> { [:bundle, :exec, :anycabled] }
 
-# Sets RAILS_ENV for AnyCable process
+# Sets RAILS_ENV for AnyCable RPC server process
 set :anycable_env, -> { fetch(:rack_env, fetch(:rails_env, fetch(:stage))) }
-# AnyCable configuration parameters passed through enviroment,
+# AnyCable RPC server configuration parameters passed through enviroment,
 # see https://docs.anycable.io/#/ruby/configuration?id=parameters
 set :anycable_environment_variables, {}
 # Path to anycable.yml
